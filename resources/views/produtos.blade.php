@@ -12,14 +12,12 @@
       <p>
         {{$produto->nome}}
         <img src="{{Voyager::image($produto->foto)}}">
-      </p>
-
-
+     </p>
     @endforeach
 
     <a href="{{route('produtos.browse')}}">Listar Produtos</a>
     <a href="{{route('empresaListar')}}">Listar Empresas</a>
     <a href="{{route('listarCategoria')}}">Listar Categorias</a>
-    
+
 </body>
 </html>

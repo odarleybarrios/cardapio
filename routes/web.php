@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/template', function () {
+    $produtos =App\Models\Produto::all();
+    return view('produtos.lista',compact('produtos'));
+})->name('template');
+
 Route::get('/produtos', function () {
     $subtitulo ="Os melhores produtos da região";
     $produtos =\App\Models\Produto::all();
